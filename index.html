@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    
+    <!--
+    Eamon Lightning
+    eamon_lightning@student.uml.edu
+    Sound Recording Technology major; Computer Science minor.
+    Created on October 22, 2014
+
+    This web site (MADLibz) provides users the with the opportunity to partake in the traditional game of mad libs in an online environment. The site also contains information regarding the history of its fictious staff and a false means of contact, all for the sake of emulating a real-world site. 
+
+    This is the site's index page. It contains the site's nav bar, the necessary links to ensure that the page functions properly, and the content div container in which the content of the partial html file that is retrieved using fragment IDs in javascript is placed.  
+    -->
+
+    <title>MadLibz</title>
+
+    <!-- Links to jQuery CDN -->
+    <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+    
+    <!-- Links to Googe Web Font -->
+    <link href='http://fonts.googleapis.com/css?family=Fira+Sans%7cSignika+Negative%7cMagra%7cGloria+Hallelujah' rel='stylesheet' type='text/css'>
+    <link href="tabs.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Links in the nav bar contain fragment IDs as their href values, which are used to retrieve their corresponding html files without having to reload the page. -->
+    <nav> 
+
+      <!-- The first a element displays the name of the site (MADLibz) and links to the partial html file Home. Span tags are used with different id attributes for styling purposes -->
+      <a href="#Home" id="logo"><span id="MAD">MAD</span><span id="Libz">Libz</span></a>
+      <a href="#Home" class="menuItem">Home</a>
+      <a href="#Fun" class="menuItem">Fun</a>
+      <a href="#About" class="menuItem">About</a>
+      <a href="#Contact" class="menuItem">Contact</a>
+    </nav>
+
+    <!-- After the partial html files are retrieved, they are placed here, in the "content" div. -->
+    <div id="content"></div>
+
+    <!-- Links to the javascript file that is responsible for all of the site's dynamic behavior, including retrieving partial html files. -->
+    <script src="GetPartials.js"></script>
+
+  </body>
+</html>

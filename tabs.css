@@ -1,0 +1,263 @@
+/* 
+Eamon Lightning
+eamon_lightning@student.uml.edu
+Sound Recording Technology major; Computer Science minor.
+Created on November 12, 2014
+
+This web site (MADLibz) provides users the with the 
+opportunity to partake in the traditional game of mad libs 
+in an online environment. The site also contains information 
+regarding the history of its fictious staff and a false means 
+of contact, all for the sake of emulating a real-world site. 
+
+This css file is used to properly position different html
+elements on the page, and adds a bit more 
+personality to the site. */
+
+/* Used to center the heading elements on each page, 
+and differentiate them from the normal text on each
+page by using a large 'Fira Sans' font, which is 
+a Google Web Font. */
+h1 {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 26px;
+  text-align: center;
+}
+
+/* The word "MAD" comprises half of the site's logo and is 
+found in the nav bar. For it, I use a large font size and the
+'Magra' Google Web Font. The margin is used to add a little 
+bit of space between the logo and the other links. */
+#MAD {
+  position: absolute;
+  font-family: 'Magra', sans-serif;
+  margin-right: 5px;
+  font-size: 35px;
+}
+
+/* The other half of the logo. "Libz" is underlined to mimic
+the stylistic underlined words of conventional mad libs. For
+it, I use a large font size and the 'Gloria Hallelujah' Google
+Web Font. */
+#Libz {
+  position: absolute;
+  font-family: 'Gloria Hallelujah', cursive;
+  text-decoration: underline;
+  margin-right:20px;
+  font-size: 35px;
+}
+
+/* Adds some nice rounded edges to the nav bar, and gives it a little
+bit of depth with the use of a box-shadow. */
+nav {
+  background-color: #8DDDFF;
+  border: solid 2px gray;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px gray;
+}
+
+/* The links located in the nav bar are spaced apart from
+eachother so as not to allow to much negative space on 
+one side of the nav bar. I used the Google Web Font 
+'Signika Negative' for the links. */
+nav a {
+  text-decoration: none;
+  margin: 2em;
+  color: black;
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 19px;
+}
+
+/* Underline the links in the nav bar that are moused over, again
+to mimic the stylistic underlined words of conventional mad libs. */
+.menuItem:hover {
+  text-decoration: underline;
+}
+
+/* Adds a bit of space in the nav bar between the logo and the links. */
+#logo {
+  margin-right: 7em;
+}
+
+/* Ensures that the logo doesn't collapse under itself. */
+#logo span {
+  position: relative;
+} 
+
+/* Other than the h1 elements, the site's text is aligned to 
+the left, becuase in this case I found it easier to read. */
+p, li, label {
+  font-weight: 200;
+  font-size: 18px;
+  text-align: left;
+}
+
+/* Adds some margins to the page, which improves readability. */
+body {
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: #FFFFFB;
+}
+
+/* Ensures that the vertical scroll bar does not cause the
+layout of the page to change. */ 
+html {
+  overflow-y: scroll;
+}
+
+/* Adds some nice rounded edges to the content div, and gives it a
+very subtle amount of depth. Also provides a little spacing between
+the content of the page and the nav bar. */
+#content {
+  background-color: #E8E7DE;
+  border: solid 2px gray;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #B0B0B0;
+  margin-top: 2.3em;
+  padding: 20px;
+}
+
+/* Makes the text describing different means of contant bold. */
+.contactBold {
+  font-weight: bold;
+}
+
+/*----------------------- Fun.html ---------------------------*/
+
+/* Adds a border to the Text Sample radio buttons of the site's
+form. */
+ul {
+  border: solid 2px #686868;
+  border-radius: 5px;
+  width: 17.5em;
+}
+
+/* Used to position the Text Sample radio buttons neatly within 
+the ul element. */
+li {
+  position: relative;
+  right: 10px;
+  list-style-type: none;
+  display: inline;
+}
+
+/* Adds a border to the input fields that accept text input from
+the user. */
+#PartsOfSpeech {
+  border: solid 2px #686868;
+  border-radius: 5px;
+  width: 20em;
+}
+
+/* Ensures that the text input fields are all aligned by giving
+some space between them and their labeled descriptions. */
+#PartsOfSpeech label {
+  display: inline-block;
+  width: 9em;
+  margin: 5px;
+}
+
+/* Used to add a bit of space between the Submit/Reset buttons
+and the PartsOfSpeech div. */
+#buttons {
+  margin-top: 1em;
+}
+
+/* Adds a little space between the Submit and Resets buttons
+relative to one another. */
+#buttons input {
+  margin-right: 10px;
+}
+
+/* Positions the mad lib to the right of the form's entry feilds. */
+#madLib {
+  position: relative;
+  width: 16em;
+  left: 28em;
+  bottom: 245px;
+  line-height: 20px;
+}
+
+/* Underlines the words add by the users to the text sample they
+selected in order to mimic the stylistic underlined words of 
+conventional mad libs. I also use a hand-written cursive styled font
+to better simulate the visual of a physical mad lib. */ 
+.underline {
+  text-decoration: underline;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+/* Makes the font color of the error message red. */
+#errorMessage {
+  width: 20em;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  color: red;
+}
+
+/*----------------------- About.html ---------------------------*/
+
+/* Centers the "The Crew" section on the About page, and makes
+sure that the info of other members of the site flow around eachother
+to the right. Since one .MemberInfo div is too large to flow around
+another, it just has the effect of pushing up against it. A border
+is also added to the top of each .MemberInfo div to seperate 
+the descriptions of the site's members. */
+.MemberInfo {
+  position: relative;
+  width: 40em;
+  float: left;
+  border-top: solid 1px #686868;
+  text-align: center;
+  margin: 1em;
+}
+
+/* The width was chosen so that the length of each member's
+descriptions would work out to be about the length of their
+corresponding images. By floating the descriptions left, the
+images appear on the right. */
+.MemberDescription {
+  position: relative;
+  width: 25em;
+  float: left;
+}
+
+/* Adds a border around the "The Crew" section on the 
+About page. */
+#TheCrew {
+  position: relative;
+  left: 6em;
+  height: 78.3em;
+  border-radius: 5px;
+  margin-top: -1em;
+  padding: 10px;
+}
+
+/* Pushes the picture down a little ways so that it's
+closer to the description of each member. */
+img {
+  position: relative;
+  top: 3.5em;
+}
+
+/* Used to make the names of the site's team stand out. */ 
+.MemberName {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Used to make the titles of the site's team stand out.
+Also pushes the title a little bit closer to the .MemberName
+elements so that they are understood to be related. */
+.MemberTitle {
+  position: relative;
+  bottom: 1em;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Adds a little bit of space between the "History" and 
+"The Crew" sections on the About page. */
+#About {
+  margin-bottom: 2em;
+}

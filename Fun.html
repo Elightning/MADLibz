@@ -1,0 +1,35 @@
+<!-- Accepts user input, which is then used to generate a mad lib. -->
+<form>
+  <ul>
+
+    <!-- By using the same name for each radio button input element, the user may only select a text sample (mad lib template). -->
+    <li>Text Sample 1 <input type="radio" name="textSample" value="text1"></li>
+    <li>Text Sample 2 <input type="radio" name="textSample" value="text2"></li>
+    <li>Text Sample 3 <input type="radio" name="textSample" value="text3"></li>
+    <li>Text Sample 4 <input type="radio" name="textSample" value="text4"></li>
+  </ul>
+
+  <div id="PartsOfSpeech">
+
+    <!-- Input fields for each part of speech specified by the label elements. -->
+    <label for="noun1">Noun (singular):</label>
+    <input type="text" name="noun1" id="noun1" placeholder="Person/Place/Thing">
+
+    <label for="verb1">Verb (present tense):</label>
+    <input type="text" name="verb1" id="verb1" placeholder="Action">
+   
+    <label for="adjective1">Adjective:</label>
+    <input type="text" name="adjective1" id="adjective1" placeholder="Modifies a noun">
+
+    <label for="adverb1">Adverb:</label>
+    <input type="text" name="adverb1" id="adverb1" placeholder="Modifies a verb">
+  </div>
+  
+  <div id="buttons">
+
+    <!-- Submit and Reset buttons both have event listeners that are fired by a click event. See GetPartials.js file for more details. --> 
+    <input type="submit" name="submit" value="Submit">
+    <input type="reset" name="reset" value="Reset" id="reset">
+  </div>
+</form>
+

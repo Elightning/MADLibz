@@ -70,6 +70,11 @@ inserts the retrieved content there. In the case that the Fun.html
 is begin retrieved, a lot more code is executed to give the mad libs
 their dynamic capabilities. */
   function assign(content, fragmentID) {
+
+/* Removes any existing mad lib from the page so that when a new
+partial html file is loaded, the mad lib is no longer displayed. */
+    $("#madLib").remove();
+    
     $("#content").html(content);
 
 /* Since the following code is only applicable when the Fun.html file is retrieved, 
@@ -161,7 +166,7 @@ by the user. This is where the mad lib is built essentially. */
         new_text = new_text.replace("verb1", "<span class=\"underline\">" + this.verb1.value + "</span>");
         new_text = new_text.replace("adjective1", "<span class=\"underline\">" + this.adjective1.value + "</span>");
         new_text = new_text.replace("adverb1", "<span class=\"underline\">" + this.adverb1.value + "</span>");
-        var display = "<div id=\"madLib\">" + new_text + "</div>";
+        var display = "<p id=\"madLib\">" + new_text + "</p>";
         
 /* The mad lib is printed to the page after the content div. */
         $("#content").after(display);
